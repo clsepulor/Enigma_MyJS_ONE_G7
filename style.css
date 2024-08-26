@@ -1,8 +1,11 @@
 :root {
   text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: cyan;
 }
 header {
   background-color: rgba(0, 255, 255, 0.5);
+  border-radius: 30px;
 }
 body {
   background: radial-gradient(circle at 20%, #121213, rgb(5, 157, 223));
@@ -11,6 +14,7 @@ footer {
   color: rgba(0, 255, 255, 0.9);
 }
 h1 {
+  font: ;
   font-size: 3rem;
   margin: 0px;
   background-color: rgba(200, 200, 200, 0.2);
@@ -21,7 +25,6 @@ button {
   width: 20%;
   height: 2.5rem;
   font-size: 1.5rem;
-
   color: cyan;
   background-color: rgba(255, 255, 255, 0.15);
   border: 2px solid cyan;
@@ -33,10 +36,10 @@ textarea {
   height: 250px;
   background-color: rgba(200, 200, 200, 0.2);
   margin: 5%;
+
   font-size: 2rem;
   border: 2px solid #00ffff;
   border-radius: 25px;
-  color: #00ffff;
   padding: 1% 2%;
 
   scrollbar-width: thin;
@@ -57,5 +60,5 @@ textarea {
   /*hola*/
 }
 .butCop {
-    width: 50%;
+  width: 50%;
 }
