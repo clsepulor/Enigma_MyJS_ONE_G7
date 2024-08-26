@@ -15,9 +15,7 @@ h1 {
   margin: 0px;
   background-color: rgba(200, 200, 200, 0.2);
 }
-.dobles {
-  flex: 1;
-}
+
 button {
   margin: 1%;
   width: 20%;
@@ -47,6 +45,9 @@ textarea {
 .container {
   display: flex;
 }
+.dobles {
+  flex: 1;
+}
 .butEnc {
-    /*hola*/
+  /*hola*/
 }
