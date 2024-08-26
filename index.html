@@ -10,27 +10,36 @@
     <link rel="icon" type="image/svg+xml" href="" />
     -->
   </head>
-  <body>
+  <header>
     <h1 id="titulo">Enigma con maizena y JavaScript</h1>
-    <textarea
-      autofocus
-      id="entrada"
-      placeholder="Ingresa texto a encriptar/desencriptar.
+  </header>
+  <body>
+    <div class="container">
+      <div class="doble">
+        <textarea
+          autofocus
+          id="entrada"
+          placeholder="Ingresa texto a encriptar/desencriptar.
 Solo minúsculas, se cambiaran mayúsculas a minúsculas y eliminaran caracteres especiales."
-    ></textarea>
-    <div>
-      <button class="butEnc" id="boton1" onclick="enigmaEnc()">
-        Encriptar
-      </button>
-      <button class="butDec" id="boton2" onclick="enigmaDec()">
-        Desencriptar
-      </button>
-      <button class="butPeg" id="boton3" onclick="pegar()">Pegar</button>
-    </div>
-    <textarea readonly id="salida"></textarea>
-    <div>
-      <button class="butCop" id="boton4" onclick="copiar()">Copiar</button>
+        ></textarea>
+        <div>
+          <button class="butEnc" id="boton1" onclick="enigmaEnc()">
+            Encriptar
+          </button>
+          <button class="butDec" id="boton2" onclick="enigmaDec()">
+            Desencriptar
+          </button>
+          <button class="butPeg" id="boton3" onclick="pegar()">Pegar</button>
+        </div>
+      </div>
+      <div class="doble">
+        <textarea readonly id="salida"></textarea>
+        <div>
+          <button class="butCop" id="boton4" onclick="copiar()">Copiar</button>
+        </div>
+      </div>
     </div>
   </body>
+  <footer>Holas</footer>
   <script src="app.js"></script>
 </html>

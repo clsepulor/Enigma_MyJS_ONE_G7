@@ -1,31 +1,51 @@
+:root {
+  text-align: center;
+}
+header {
+  background-color: rgba(0, 255, 255, 0.5);
+}
 body {
-  background: radial-gradient(circle at 2%, #121213, rgb(70, 70, 70));
+  background: radial-gradient(circle at 20%, #121213, rgb(5, 157, 223));
+}
+footer {
+  color: rgba(0, 255, 255, 0.9);
 }
 h1 {
   font-size: 3rem;
   margin: 0px;
   background-color: rgba(200, 200, 200, 0.2);
 }
-div {
-  display: flex;
-  /*
-  align-items: stretch;
-  */
+.doble {
+  flex: 1;
 }
 button {
   margin: 1%;
-  width: 30%;
-  height: 2rem;
+  width: 20%;
+  height: 2.5rem;
   font-size: 1.5rem;
+
+  color: cyan;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid cyan;
+  border-radius: 5px;
 }
 textarea {
   resize: none;
-  width: 97%;
+  width: 80%;
   height: 250px;
   background-color: rgba(200, 200, 200, 0.2);
-  margin: 1%;
+  margin: 5%;
   font-size: 2rem;
+  border: 2px solid #00ffff;
+  border-radius: 25px;
+  color: #00ffff;
+  padding: 1% 2%;
+
+  scrollbar-width: thin;
+  scrollbar-color: cyan rgba(50, 50, 50, 0.5);
+}
+.container {
+  display: flex;
 }
 .butEnc {
-  color: aqua;
 }
