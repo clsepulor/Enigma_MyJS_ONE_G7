@@ -50,7 +50,6 @@ function enigmaDec() {
         if (Texto[CaracterA + iB] != Post[Codigo][iB]) {
           Cambio = false;
           break;
-          gaitober;
         }
       }
 
@@ -85,15 +84,28 @@ function escribirTexto(IDelemento, Texto) {
 
 function leerTexto(IDelemento) {
   let elementoHTML = document.getElementById(IDelemento).value;
+  let PostTexto = elementoHTML.split("");
+  let Cambio = false;
   let letra = "";
   for (let i = 0; i < elementoHTML.length; i++) {
-    letra = elementoHTML.charCodeAt(i);
-    if (letra < 97 || letra > 122) {
-      alert(
-        "Caracter invalido\nRecuerda que no se pueden utilizar letras mayusculas ni carateres especiales."
-      );
-      return false;
+    letra = PostTexto[i].charCodeAt(0);
+    if ((letra < 97 || letra > 122) && letra != 32) {
+      if (!Cambio) {
+        alert(
+          "Caracter invalido\nRecuerda que no se pueden utilizar letras mayusculas ni carateres especiales.\nSe transformaran las letras mayusculas en minusculas y se eliminaran caracteres especiales"
+        );
+        Cambio = true;
+      }
+      letra += 32;
+      PostTexto[i] = String.fromCharCode(letra);
+      if ((letra < 97 || letra > 122) && letra != 32) {
+        PostTexto[i] = "";
+      }
     }
+  }
+  document.getElementById("entrada").value = PostTexto.join("");
+  if (Cambio) {
+    return false;
   }
   return elementoHTML;
 }
