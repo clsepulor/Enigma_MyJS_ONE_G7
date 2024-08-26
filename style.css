@@ -44,10 +44,18 @@ textarea {
 }
 .container {
   display: flex;
-}
-.dobles {
-  flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 .butEnc {
   /*hola*/
+}
+.butDec {
+  /*hola*/
+}
+.butPeg {
+  /*hola*/
+}
+.butCop {
+    width: 50%;
 }
