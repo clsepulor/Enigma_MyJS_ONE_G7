@@ -1,0 +1,12 @@
+body {
+    background-color: lightblue;
+  }
+  h1 {
+    color: navy;
+  }
+.boton {
+    margin: 1%;
+    width: 30%;
+    height: 40px;
+    font-size: 27rem;
+}
