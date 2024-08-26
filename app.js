@@ -2,13 +2,18 @@ const Pre = ["a", "e", "i", "o", "u"];
 const Post = ["ai", "enter", "imes", "ober", "ufat"];
 var Estado = false;
 
-function cambioTexto(IDelemento, texto) {
+function escribirTexto(IDelemento, Texto) {
   let elementoHTML = document.getElementById(IDelemento);
-  elementoHTML.innerHTML = texto;
+  elementoHTML.innerHTML = Texto;
+}
+
+function leerTexto(){
+    let elementoHTML = document.getElementById(IDelemento);
+    return elementoHTML.innerHTML();
 }
 
 function enigmaEnc() {
-  let Texto = document.getElementById("cajaTexto").value;
+  let Texto = document.getElementById("entrada").value;
   let PostTexto = "";
   let Cambio = false;
 
@@ -26,11 +31,11 @@ function enigmaEnc() {
 
     Cambio = false;
   }
-  cambioTexto("salida", PostTexto);
+  escribirTexto("salida", PostTexto);
 }
 
 function enigmaDec() {
-  let Texto = document.getElementById("cajaTexto").value;
+  let Texto = document.getElementById("entrada").value;
   let PostTexto = "";
   let Cambio = false;
 
@@ -63,13 +68,15 @@ function enigmaDec() {
       PostTexto += Texto[Caracter];
     }
   }
-  cambioTexto("salida", PostTexto);
+  escribirTexto("salida", PostTexto);
 }
 
 function pegar() {
   navigator.clipboard
     .readText()
-    .then((clipText) => console.log(clipText); cambioTexto("cajaTexto", clipText));
+    .then(
+      (clipText) => (document.getElementById("entrada").value = clipText)
+    );
 }
 
 function copiar() {

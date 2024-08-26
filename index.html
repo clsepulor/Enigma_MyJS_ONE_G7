@@ -5,29 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Nombre pestaña-->
     <title>EnigmaV0.01</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="style.css" />
+    <!--
+    <link rel="icon" type="image/svg+xml" href="" />
+    -->
   </head>
   <body>
-    <style>
-      body {
-        background: radial-gradient(circle at 2%, #121213, rgb(70, 70, 70));
-      }
-    </style>
-    <h1 id="titulo" style="font-size: 3rem; margin: 0px;  background-color: rgba(200, 200, 200, 0.2)">
-      Enigma con maizena y JavaScript
-    </h1>
-    <textarea autofocus id="entrada" style="resize: none; width: 97%; height: 200px; background-color: rgba(200, 200, 200, 0.2); margin: 1%; font-size: 2rem;" 
-    placeholder="Ingresa texto a encriptar/desencriptar."></textarea>
+    <h1 id="titulo">Enigma con maizena y JavaScript</h1>
+    <textarea
+      autofocus
+      id="entrada"
+      placeholder="Ingresa texto a encriptar/desencriptar."
+    ></textarea>
     <div></div>
-    <button id="boton1" style="margin: .5%; width: 30%; height: 40px; font-size: 1.5rem;" onclick="enigmaEnc()">Encriptar</button>
-    <button id="boton2" style="margin: .5%; width: 30%; height: 40px; font-size: 1.5rem;"onclick="enigmaDec()">Desencriptar</button>
-    <button id="boton3" style="margin: .5%; width: 30%; height: 40px; font-size: 1.5rem;"onclick="pegar()">Pegar</button>
+    <button class="butEnc" id="boton1" onclick="enigmaEnc()">Encriptar</button>
+    <button class="butDec" id="boton2" onclick="enigmaDec()">Desencriptar</button>
+    <button class="butPeg" id="boton3" onclick="pegar()">Pegar</button>
     <div></div>
-    <textarea readonly id="salida" style="resize: none; width: 97%; height: 200px; background-color: rgba(200, 200, 200, 0.2); margin: 1%; font-size: 2rem;"></textarea>
+    <textarea readonly id="salida"></textarea>
     <div></div>
 
-    <button class="boton" id="boton4" onclick="copiar()">Copiar</button>
+    <button class="butCop" id="boton4" onclick="copiar()">Copiar</button>
     <div></div>
   </body>
   <script src="app.js"></script>
