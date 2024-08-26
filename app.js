@@ -2,18 +2,11 @@ const Pre = ["a", "e", "i", "o", "u"];
 const Post = ["ai", "enter", "imes", "ober", "ufat"];
 var Estado = false;
 
-function escribirTexto(IDelemento, Texto) {
-  let elementoHTML = document.getElementById(IDelemento);
-  elementoHTML.innerHTML = Texto;
-}
-
-function leerTexto(){
-    let elementoHTML = document.getElementById(IDelemento);
-    return elementoHTML.innerHTML();
-}
-
 function enigmaEnc() {
-  let Texto = document.getElementById("entrada").value;
+  let Texto = leerTexto("entrada");
+  if (Texto == false) {
+    return;
+  }
   let PostTexto = "";
   let Cambio = false;
 
@@ -35,7 +28,10 @@ function enigmaEnc() {
 }
 
 function enigmaDec() {
-  let Texto = document.getElementById("entrada").value;
+  let Texto = leerTexto("entrada");
+  if (Texto == false) {
+    return;
+  }
   let PostTexto = "";
   let Cambio = false;
 
@@ -74,12 +70,30 @@ function enigmaDec() {
 function pegar() {
   navigator.clipboard
     .readText()
-    .then(
-      (clipText) => (document.getElementById("entrada").value = clipText)
-    );
+    .then((clipText) => (document.getElementById("entrada").value = clipText));
 }
 
 function copiar() {
   let Texto = document.getElementById("salida").value;
   navigator.clipboard.writeText(Texto);
+}
+
+function escribirTexto(IDelemento, Texto) {
+  let elementoHTML = document.getElementById(IDelemento);
+  elementoHTML.innerHTML = Texto;
+}
+
+function leerTexto(IDelemento) {
+  let elementoHTML = document.getElementById(IDelemento).value;
+  let letra = "";
+  for (let i = 0; i < elementoHTML.length; i++) {
+    letra = elementoHTML.charCodeAt(i);
+    if (letra < 97 || letra > 122) {
+      alert(
+        "Caracter invalido\nRecuerda que no se pueden utilizar letras mayusculas ni carateres especiales."
+      );
+      return false;
+    }
+  }
+  return elementoHTML;
 }
