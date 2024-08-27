@@ -1,78 +1,95 @@
 :root {
-  text-align: center;
-  font-family: "Courier New", Courier, monospace;
-  color: cyan;
-}
-header {
-  background-color: rgba(0, 255, 255, 0.5);
-  border-radius: 30px;
-}
-body {
-  background: radial-gradient(circle at 20%, #000000, rgb(2, 109, 156));
-  margin: 0;
-  padding-bottom: 50px;
-  min-height: 100vh;
-  position: relative;
-}
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  color: rgba(0, 255, 255, 0.9);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  background-color: #333;
-  color: white;
-}
-h1 {
-  font-size: 3rem;
-  margin: 0px;
-}
-
-button {
-  font-family: "Courier New", Courier, monospace;
-  margin: 1%;
-  width: 25%;
-  height: 2.5rem;
-  font-size: 1.5rem;
-  color: cyan;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 2px solid cyan;
-  border-radius: 5px;
-}
-textarea {
-  resize: none;
-  width: 77%;
-  height: 250px;
-  background-color: rgba(200, 200, 200, 0.2);
-  margin: 5%;
-
-  font-size: 2rem;
-  border: 2px solid #00ffff;
-  border-radius: 25px;
-  padding: 1% 2%;
-
-  scrollbar-width: thin;
-  scrollbar-color: cyan rgba(50, 50, 50, 0.5);
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
-}
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.butEnc {
-  /*hola*/
-}
-.butDec {
-  /*hola*/
-}
-.butPeg {
-  /*hola*/
-}
-.butCop {
-  width: 50%;
-}
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    color: cyan;
+  }
+  header {
+    background-color: rgba(0, 255, 255, 0.5);
+    border-radius: 30px;
+  }
+  body {
+    background: radial-gradient(circle at 20%, #000000, rgb(2, 109, 156));
+    margin: 0;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    position: relative;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: rgba(0, 255, 255, 0.9);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    color: white;
+  }
+  h1 {
+    font-size: 3rem;
+    margin: 0px;
+  }
+  
+  button {
+    font-family: "Courier New", Courier, monospace;
+    margin: 1%;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    color: cyan;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid cyan;
+    border-radius: 5px;
+    width: auto;
+  }
+  textarea {
+    resize: none;
+    width: 40vw;
+    height: 50vh;
+    background-color: rgba(200, 200, 200, 0.2);
+    margin: 5vmin;
+  
+    font-size: 2rem;
+    border: 2px solid #00ffff;
+    border-radius: 25px;
+    padding: 1% 2%;
+  
+    scrollbar-width: thin;
+    scrollbar-color: cyan rgba(50, 50, 50, 0.5);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (aspect-ratio < 1/1) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    textArea {
+      margin: 2vmin;
+      width: 85vw;
+      height: 28vh;
+      font-size: 1.5rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    button {
+      font-size: 1.2rem;
+      width: 40vw;
+    }
+    #divBot {
+      margin: 3vw;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
