@@ -8,7 +8,7 @@ header {
   border-radius: 30px;
 }
 body {
-  background: radial-gradient(circle at 20%, #121213, rgb(5, 157, 223));
+  background: radial-gradient(circle at 20%, #000000, rgb(2, 109, 156));
   margin: 0;
   padding-bottom: 50px;
   min-height: 100vh;

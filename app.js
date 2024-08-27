@@ -1,6 +1,5 @@
 const Pre = ["a", "e", "i", "o", "u"];
 const Post = ["ai", "enter", "imes", "ober", "ufat"];
-var Estado = false;
 
 function enigmaEnc() {
   let Texto = leerTexto("entrada");
