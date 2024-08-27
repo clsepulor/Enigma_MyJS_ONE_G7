@@ -91,7 +91,7 @@ function leerTexto(IDelemento) {
     if ((letra < 97 || letra > 122) && letra != 32) {
       if (!Cambio) {
         alert(
-          "Caracter invalido\nRecuerda que no se pueden utilizar letras mayusculas ni carateres especiales.\nSe transformaran las letras mayusculas en minusculas y se eliminaran caracteres especiales"
+          "Caracter invalido\n\nRecuerda que no se pueden utilizar letras mayusculas ni carateres especiales.\nSe transformaran las letras mayusculas en minusculas y se eliminaran caracteres especiales"
         );
         Cambio = true;
       }
